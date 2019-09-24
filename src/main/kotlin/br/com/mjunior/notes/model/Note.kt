@@ -1,4 +1,12 @@
 package br.com.mjunior.notes.model
 
-class Note (val title: String,
+import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.Id
+
+@Entity
+class Note (@Id
+            @GeneratedValue
+            val id: Long = 0L,
+            val title: String,
             val description: String)
